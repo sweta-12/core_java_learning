@@ -5,38 +5,34 @@
 */
  
 import java.util.Scanner;
-class PrimeNumber
-{
-	public static void main(String[] args) 
+public class PrimeNumber {
+
+	public static void main(String[] args)
 	{
 		
-		String primeNumbers="  ";
-		int i=0;
-		int num=0;
-		
-		System.out.println("Enter the from till you want to print from 1: ");
-		
-		Scanner Sc= new Scanner(System.in);
-		int n= Sc.nextInt();
-		 
-		for(i=1;i<=n;i++)
+		System.out.println("enter any number to check whether it is prime or not:");
+		Scanner Sc=new Scanner(System.in);
+		int a = Sc.nextInt();
+		int b = Sc.nextInt();
+		int i;
+		int n;
+		for(n=a+1;n<=b-1;n++)
 		{
-			int counter=0;
-				for(num=i;num>=1;num--)
-				{
-					if(i%num==0)
-					{
-						counter=counter+1;
-					}
-		         }
-		if(counter==2)
+			for(i=2;i<=n-1;i++)
 			{
-				primeNumbers=primeNumbers + i +" ";
+				if(n%i==0)
+				{
+					break;
+				}
+				
 			}
-	
+			
+			if(n==i)
+			{
+				System.out.println(n);
+			}
+			
 		}
-	System.out.println("prime numbers from 1 to n are: ");
-	System.out.println(primeNumbers);
+	}
 
-}
 }
