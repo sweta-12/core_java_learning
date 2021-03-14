@@ -22,8 +22,13 @@ public static void main(String[] args){
 	else if(n == 2){
 		System.out.println("Go");
 	}
-	else{
+	else if(n==3)
+	{
 		System.out.println("Ready");
+	}
+	else
+	{
+		System.out.println("invalid number");
 	}
 	
 }
